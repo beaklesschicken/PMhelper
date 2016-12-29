@@ -39,6 +39,7 @@ function gs(css) {
     gs('.requestOff {border-radius: 3px; color:white; font-weight: bold; background: repeating-linear-gradient(45deg, hsla(0, 100%, 50%, 1), hsla(195, 61.6%, 42.9%, 1) 10px, hsla(0, 100%, 50%, 0.5) 10px,hsla(195, 61.6%, 42.9%, 0.5) 20px); };');
     gs('.person-table.overtime {border: 1px solid red !important;}');
     gs('.summaryBox {font-size:.8em;}');
+    gs('.summaryTable td {padding:0px;}');
     
 
 jQuery(function($) {
@@ -182,19 +183,19 @@ jQuery(function($) {
             tableInsert += '            <td id="day_'+ dayIndex +'_ctam">'+ checkMins(dayIndex,'ctam') +'</td>';
             tableInsert += '        </tr>';
             tableInsert += '        <tr>';
-            tableInsert += '            <td id="day_'+ dayIndex +'_svpm">'+ allShifts[dayIndex].svpm +'</td>';
+            tableInsert += '            <td id="day_'+ dayIndex +'_svpm">'+ checkMins(dayIndex, 'svpm') +'</td>';
             tableInsert += '            <td>PM</td>';
-            tableInsert += '            <td id="day_'+ dayIndex +'_ctpm">'+ allShifts[dayIndex].ctpm +'</td>';
+            tableInsert += '            <td id="day_'+ dayIndex +'_ctpm">'+ checkMins(dayIndex, 'ctpm') +'</td>';
             tableInsert += '        </tr>';
             tableInsert += '        <tr>';
-            tableInsert += '            <td id="day_'+ dayIndex +'_svop">'+ allShifts[dayIndex].svopen +'</td>';
+            tableInsert += '            <td id="day_'+ dayIndex +'_svop">'+ checkMins(dayIndex, 'svopen') +'</td>';
             tableInsert += '            <td>OPEN</td>';
-            tableInsert += '            <td id="day_'+ dayIndex +'_cdop">'+ allShifts[dayIndex].ctopen +'</td>';
+            tableInsert += '            <td id="day_'+ dayIndex +'_cdop">'+ checkMins(dayIndex, 'ctopen') +'</td>';
             tableInsert += '        </tr>';
             tableInsert += '                <tr>';
-            tableInsert += '                    <td id="day_'+ dayIndex +'_svcl">'+ allShifts[dayIndex].svclose +'</td>';
+            tableInsert += '                    <td id="day_'+ dayIndex +'_svcl">'+ checkMins(dayIndex, 'svclose') +'</td>';
             tableInsert += '                    <td>CLOSE</td>';
-            tableInsert += '            <td id="day_'+ dayIndex +'_ctcl">'+ allShifts[dayIndex].ctclose +'</td>';
+            tableInsert += '            <td id="day_'+ dayIndex +'_ctcl">'+ checkMins(dayIndex, 'ctclose') +'</td>';
             tableInsert += '            </tr>';
             tableInsert += '   </tbody>';
             tableInsert += '  </table>';
@@ -205,11 +206,7 @@ jQuery(function($) {
     function checkMins(dayIndex,param) {
         var curShift = allShifts[dayIndex][param];
         var minShift = shiftMins[dayIndex][param];
-        if( curShift >= minShift ) {
-            return '<span style="color:green;font-weight:bold" title="Minimum: '+ minShift + '">' + curShift + '</span>';
-        } else {
-            return '<span style="color:red; title="Minimum: '+ minShift + '">' + curShift + '</span>';
-        }
+            return '<span style="color:red;">' + curShift + " / " + minShift '</span>';
     }
     
 
