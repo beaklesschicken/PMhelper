@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         People Matter Schedule Helper
-// @namespace    http://beaklesschicken.com/scripts
+// @namespace    PMhelper/People Matter Schedule Helper.js
 // @version      0.1
 // @description  Helps with people matter SCHEDULE module
 // @author       Eric
