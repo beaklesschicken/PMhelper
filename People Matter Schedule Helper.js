@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         People Matter Schedule Helper
-// @namespace    https://raw.githubusercontent.com/beaklesschicken/PMhelper/master/People%20Matter%20Schedule%20Helper.js
-// @version      0.1
+// @namespace    https://githubusercontent.com/beaklesschicken/PMhelper/
+// @version      0.2
 // @description  Helps with people matter SCHEDULE module
 // @author       Eric
 // @match        https://my.peoplematter.com/haciendafiesta/Schedule/ManageSchedule/*
+// @download		 https://raw.githubusercontent.com/beaklesschicken/PMhelper/master/People%20Matter%20Schedule%20Helper.js
+// @update			 https://raw.githubusercontent.com/beaklesschicken/PMhelper/master/People%20Matter%20Schedule%20Helper.js
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
