@@ -132,7 +132,7 @@ function gs(css) {
         }
         function BuildServers() {
             // Build the server numbers
-            //resetAll();
+            resetAll();
             $('div.shift').each(function() {
                 var dayNum = parseInt($(this).closest('td').data('day-index')); //get the day number of the shift
                 if(!$(this).hasClass('shift-alt')) {
