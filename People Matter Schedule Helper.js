@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         People Matter Schedule Helper
 // @namespace    https://githubusercontent.com/beaklesschicken/PMhelper/
-// @version      0.2
+// @version      0.3
 // @description  Helps with people matter SCHEDULE module
 // @author       Eric
 // @match        https://my.peoplematter.com/haciendafiesta/Schedule/ManageSchedule/*
