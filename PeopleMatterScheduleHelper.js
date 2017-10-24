@@ -6,7 +6,7 @@
 // @author       Eric
 // @match        https://my.peoplematter.com/haciendafiesta/Schedule/ManageSchedule/*
 // @download	 https://raw.githubusercontent.com/beaklesschicken/PMhelper/master/People%20Matter%20Schedule%20Helper.js
-// @update		 https://raw.githubusercontent.com/beaklesschicken/PMhelper/master/People%20Matter%20Schedule%20Helper.js
+// @update	     https://raw.githubusercontent.com/beaklesschicken/PMhelper/master/People%20Matter%20Schedule%20Helper.js
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
@@ -46,9 +46,9 @@ function gs(css) {
     gs('.timeline .intervals li button, .timeline .intervals li span {padding:0px 0px !important;}');
     
     jQuery(function($) {
-        var mTimes = ["8a","9a","10a","10:30a","11a","11:30a","12a"];
-        var nTimes = ["3p","4P","4:30p","5p","5:30p","6p"];
-        var oTimes = ["8a","10a","10:30a"];
+        var mTimes = ["8a","9a","10a","10:30a","11a","11:30a","12a"]; //Morning times
+        var nTimes = ["3p","4P","4:30p","5p","5:30p","6p"]; //Night times
+        var oTimes = ["8a","10a","10:30a"]; //Shift open times
         var dayNames = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
         var days = [];
         var shiftIds = {
@@ -118,6 +118,7 @@ function gs(css) {
 
         function resetAll() {
             for(i=0;i<dayNames.length;i++) {
+                days[i].servers.length = 0;
                 days[i].servers = new serverShifts(0,0,0,0,0,0,0,0,0,0);
                 days[i].kitchen = new kitchenShifts(0,0,0,0,0,0,0,0,0,0,0,0,0);
                 days[i].hosts = new hostShifts(0,0,0,0,0,0,0,0);                  
