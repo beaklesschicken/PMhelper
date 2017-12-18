@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         People Matter Schedule Helper
 // @namespace    https://githubusercontent.com/beaklesschicken/PMhelper/
-// @version      0.35
+// @version      0.36
 // @description  Helps with people matter SCHEDULE module
 // @author       Eric
 // @match        https://my.peoplematter.com/haciendafiesta/Schedule/ManageSchedule/*
@@ -46,9 +46,9 @@ function gs(css) {
     gs('.timeline .intervals li button, .timeline .intervals li span {padding:0px 0px !important;}');
     
     jQuery(function($) {
-        var mTimes = ["8a","9a","10a","10:30a","11a","11:30a","12a"]; //Morning times
+        var mTimes = ["8a","9a","10a","10:30a","10:45a","11a","11:30a","12a"]; //Morning times
         var nTimes = ["3p","4P","4:30p","5p","5:30p","6p"]; //Night times
-        var oTimes = ["8a","10a","10:30a"]; //Shift open times
+        var oTimes = ["8a","10a","10:30a","10:45a"]; //Shift open times
         var dayNames = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
         var days = [];
         var shiftIds = {
