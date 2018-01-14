@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         People Matter Schedule Helper
 // @namespace    https://githubusercontent.com/beaklesschicken/PMhelper/
-// @version      0.36
+// @version      0.37
 // @description  Helps with people matter SCHEDULE module
 // @author       Eric
 // @match        https://my.peoplematter.com/haciendafiesta/Schedule/ManageSchedule/*
@@ -177,6 +177,7 @@ function gs(css) {
             addTables("servers");
         } // End Build Servers
         function BuildKitchen() {
+            resetAll();
             $('div.shift').each(function() {
                 var dayNum = parseInt($(this).closest('td').data('day-index')); //get the day number of the shift
                 if(!$(this).hasClass('shift-alt')) {
